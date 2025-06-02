@@ -1,0 +1,319 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Bright, modern color palette */
+    --background: 0 0% 100%;
+    --foreground: 225 15% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 225 15% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 225 15% 15%;
+
+    /* Vibrant primary - Electric Blue */
+    --primary: 220 100% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Dynamic secondary - Coral Pink */
+    --secondary: 340 85% 65%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Modern accent - Purple */
+    --accent: 270 75% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Subtle backgrounds */
+    --muted: 220 20% 96%;
+    --muted-foreground: 225 15% 35%;
+
+    /* Status colors - more vibrant */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 220 25% 88%;
+    --input: 220 25% 88%;
+    --ring: 220 100% 60%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Rich dark theme */
+    --background: 225 25% 8%;
+    --foreground: 0 0% 95%;
+    --card: 225 25% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 225 25% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Neon-like primaries for dark mode */
+    --primary: 220 100% 70%;
+    --primary-foreground: 225 25% 8%;
+
+    /* Bright secondary */
+    --secondary: 340 85% 70%;
+    --secondary-foreground: 225 25% 8%;
+
+    /* Vivid accent */
+    --accent: 270 75% 70%;
+    --accent-foreground: 225 25% 8%;
+
+    --muted: 225 25% 18%;
+    --muted-foreground: 0 0% 75%;
+
+    /* Glowing status colors */
+    --success: 142 76% 50%;
+    --success-foreground: 225 25% 8%;
+    --warning: 38 92% 60%;
+    --warning-foreground: 225 25% 8%;
+    --destructive: 0 72% 60%;
+    --destructive-foreground: 225 25% 8%;
+
+    --border: 225 25% 20%;
+    --input: 225 25% 20%;
+    --ring: 220 100% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-family: "Noto Nastaliq Urdu", "Poppins", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Noto Nastaliq Urdu", "Playfair Display", serif;
+  }
+}
+
+/* Enhanced glass effects */
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.glass-card.dark {
+  background: rgba(30, 30, 40, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Dynamic gradient text */
+.gradient-text {
+  @apply text-transparent bg-clip-text;
+  background-image: linear-gradient(
+    135deg,
+    hsl(var(--primary)),
+    hsl(var(--secondary)),
+    hsl(var(--accent))
+  );
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Vibrant gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary) / 0.08),
+    hsl(var(--secondary) / 0.08),
+    hsl(var(--accent) / 0.08)
+  );
+  background-size: 400% 400%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+.dark .gradient-bg {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary) / 0.15),
+    hsl(var(--secondary) / 0.15),
+    hsl(var(--accent) / 0.15)
+  );
+}
+
+/* Enhanced button styles */
+.btn-primary {
+  @apply bg-primary text-primary-foreground hover:bg-primary/90;
+  @apply shadow-lg hover:shadow-xl transition-all duration-200;
+  @apply transform hover:scale-105 active:scale-95;
+  box-shadow: 0 4px 15px hsl(var(--primary) / 0.4);
+}
+
+.btn-secondary {
+  @apply bg-secondary text-secondary-foreground hover:bg-secondary/90;
+  @apply shadow-lg hover:shadow-xl transition-all duration-200;
+  @apply transform hover:scale-105 active:scale-95;
+  box-shadow: 0 4px 15px hsl(var(--secondary) / 0.4);
+}
+
+.btn-accent {
+  @apply bg-accent text-accent-foreground hover:bg-accent/90;
+  @apply shadow-lg hover:shadow-xl transition-all duration-200;
+  @apply transform hover:scale-105 active:scale-95;
+  box-shadow: 0 4px 15px hsl(var(--accent) / 0.4);
+}
+
+/* Glowing focus states */
+.focus-glow:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px hsl(var(--background)), 0 0 0 4px hsl(var(--primary)),
+    0 0 20px hsl(var(--primary) / 0.3);
+}
+
+/* Container and layout */
+.container {
+  @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
+}
+
+.section-padding {
+  @apply py-16 md:py-24 lg:py-32;
+}
+
+/* Enhanced marquee with gradient edges */
+.marquee {
+  @apply overflow-hidden whitespace-nowrap relative;
+}
+
+.marquee::before,
+.marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.marquee::before {
+  left: 0;
+  background: linear-gradient(to right, hsl(var(--background)), transparent);
+}
+
+.marquee::after {
+  right: 0;
+  background: linear-gradient(to left, hsl(var(--background)), transparent);
+}
+
+.marquee-content {
+  @apply inline-block animate-marquee;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+  animation-play-state: running;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Color utility classes */
+.text-primary {
+  color: hsl(var(--primary));
+}
+.text-secondary {
+  color: hsl(var(--secondary));
+}
+.text-accent {
+  color: hsl(var(--accent));
+}
+.text-success {
+  color: hsl(var(--success));
+}
+.text-warning {
+  color: hsl(var(--warning));
+}
+.text-destructive {
+  color: hsl(var(--destructive));
+}
+
+.bg-primary {
+  background-color: hsl(var(--primary));
+}
+.bg-secondary {
+  background-color: hsl(var(--secondary));
+}
+.bg-accent {
+  background-color: hsl(var(--accent));
+}
+.bg-success {
+  background-color: hsl(var(--success));
+}
+.bg-warning {
+  background-color: hsl(var(--warning));
+}
+.bg-destructive {
+  background-color: hsl(var(--destructive));
+}
+
+/* Border utilities with colors */
+.border-primary {
+  border-color: hsl(var(--primary));
+}
+.border-secondary {
+  border-color: hsl(var(--secondary));
+}
+.border-accent {
+  border-color: hsl(var(--accent));
+}
+
+/* Neon glow effects */
+.glow-primary {
+  box-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+}
+
+.glow-secondary {
+  box-shadow: 0 0 20px hsl(var(--secondary) / 0.5);
+}
+
+.glow-accent {
+  box-shadow: 0 0 20px hsl(var(--accent) / 0.5);
+}
