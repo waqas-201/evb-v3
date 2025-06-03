@@ -129,7 +129,7 @@ const TestimonialsSection = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={prevSlide}
-            className="absolute top-1/2 -left-4 md:-left-8 -translate-y-1/2 z-10 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 p-3 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+            className="absolute top-1/2 -left-4 md:-left-8  z-10 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 p-3 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
           >
             <ChevronLeft size={20} />
           </motion.button>
@@ -138,7 +138,7 @@ const TestimonialsSection = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={nextSlide}
-            className="absolute top-1/2 -right-4 md:-right-8 -translate-y-1/2 z-10 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 p-3 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+            className="absolute top-1/2 -right-4 md:-right-8 z-10 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 p-3 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
           >
             <ChevronRight size={20} />
           </motion.button>

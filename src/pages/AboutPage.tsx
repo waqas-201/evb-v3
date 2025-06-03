@@ -46,8 +46,9 @@ const AboutPage = () => {
       variants={pageVariants}
     >
       <Helmet>
-        <title>About Us | Rs Media</title>
-        <meta name="description" content="Learn about our professional event planning services and our commitment to creating unforgettable experiences" />
+        <title>*About Us – RS Media Solutions*
+        </title>
+        <meta name="description" content="At *RS Media Solutions*, we specialize in turning your ideas into exceptional realities through expert event planning and media services. Whether it’s a corporate conference, seminar, wedding, product launch, or private gathering, we are your one-stop solution for flawless execution and unforgettable experiences — both indoors and outdoors" />
       </Helmet>
 
       {/* Hero Section */}
@@ -67,10 +68,11 @@ const AboutPage = () => {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
-              About <span className="text-primary">Rs Media Services</span>
+              About <span className="text-primary"> RS Media Solutions</span>
             </h1>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Creating unforgettable moments and bringing your event dreams to life with elegance and precision.
+            <p className="text-xl text-white/90 max-w-2xl mx-auto justify-start
+">
+              At RS Media Solutions, we specialize in turning your ideas into exceptional realities through expert event planning and media services. Whether it’s a corporate conference, seminar, wedding, product launch, or private gathering, we are your one-stop solution for flawless execution and unforgettable experiences — both indoors and outdoors.
             </p>
           </motion.div>
         </div>

@@ -29,7 +29,7 @@ const CookieConsent = ({ onAccept }: CookieConsentProps) => {
           <div className="glass-card dark:glass-card-dark max-w-4xl mx-auto rounded-lg p-4 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex-1">
               <h3 className="text-lg font-medium mb-1">We use cookies</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-300">
+              <p className="text-sm text-white dark:text-gray-300">
                 We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
               </p>
             </div>
