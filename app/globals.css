@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Bright, modern color palette */
+    --background: 0 0% 100%;
+    --foreground: 225 15% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 225 15% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 225 15% 15%;
+
+    /* Vibrant primary - Electric Blue */
+    --primary: 220 100% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Dynamic secondary - Coral Pink */
+    --secondary: 340 85% 65%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Modern accent - Purple */
+    --accent: 270 75% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Subtle backgrounds */
+    --muted: 220 20% 96%;
+    --muted-foreground: 225 15% 35%;
+
+    /* Status colors - more vibrant */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 220 25% 88%;
+    --input: 220 25% 88%;
+    --ring: 220 100% 60%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Rich dark theme */
+    --background: 225 25% 8%;
+    --foreground: 0 0% 95%;
+    --card: 225 25% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 225 25% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Neon-like primaries for dark mode */
+    --primary: 220 100% 70%;
+    --primary-foreground: 225 25% 8%;
+
+    /* Bright secondary */
+    --secondary: 340 85% 70%;
+    --secondary-foreground: 225 25% 8%;
+
+    /* Vivid accent */
+    --accent: 270 75% 70%;
+    --accent-foreground: 225 25% 8%;
+
+    --muted: 225 25% 18%;
+    --muted-foreground: 0 0% 75%;
+
+    /* Glowing status colors */
+    --success: 142 76% 50%;
+    --success-foreground: 225 25% 8%;
+    --warning: 38 92% 60%;
+    --warning-foreground: 225 25% 8%;
+    --destructive: 0 72% 60%;
+    --destructive-foreground: 225 25% 8%;
+
+    --border: 225 25% 20%;
+    --input: 225 25% 20%;
+    --ring: 220 100% 70%;
+  }
+}
+
+/* Rest of your existing CSS remains the same */
