@@ -6,8 +6,16 @@ import FeaturedEventsSection from '../components/home/FeaturedEventsSection';
 import TestimonialsSection from '../components/home/TestimonialsSection';
 import CtaSection from '../components/home/CtaSection';
 import { pageVariants } from '../lib/utils';
+import { CaseStudyModal } from '../components/home/CaseStudyModel';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../store';
 
 const HomePage = () => {
+  const isModelOpen = useSelector((state: RootState) => state.caseStudyModel.isModelOpen)
+  const eventData = useSelector((state: RootState) => state.eventReducer.events)
+
+
+
   return (
     <motion.div
       initial="initial"
@@ -22,6 +30,7 @@ const HomePage = () => {
       
       <HeroSection />
       <ServicesSection />
+      {isModelOpen && eventData.length > 0 && <CaseStudyModal event={eventData[0]} />}
       <FeaturedEventsSection />
       <TestimonialsSection />
       <CtaSection />

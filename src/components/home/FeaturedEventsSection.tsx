@@ -1,15 +1,18 @@
 import { useState, useRef, useCallback, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
-import { ChevronRight, ChevronLeft } from 'lucide-react';
-
-const events = [
+import { ChevronRight, ChevronLeft, } from 'lucide-react';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleModel } from '../../featuers/casestudy/caseStudySlice';
+import { RootState } from '../../../store';
+import { addEvent } from '../../featuers/casestudy/eventsDataSlice';
+const eventss = [
   {
     id: 1,
     title: 'CEO Summit Asia 2022',
     description: 'Spectacular opening ceremony of Pakistan Super League at National Stadium Karachi',
     image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyBkGjIFE8OQ4V570p6EXahRmwylvNzYkUrcLn',
     category: 'corporate',
+
   },
   {
     id: 2,
@@ -40,6 +43,99 @@ const events = [
     category: 'corporate'
   }
 ];
+const events = [
+
+  {
+    id: 2,
+    title: 'Dawlance Product Showcase',
+    description: 'Dawlance Product Launch Product showcase and promotional activation for Dawlance appliances at a public expo',
+    image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyJHMyyQuBaU9zbedcwR2EV6ps1lu0vCyIi5hQ',
+    category: 'corporate',
+    details: {
+      date: 'November 10-12, 2022',
+      location: 'Karachi Expo Center',
+      attendees: 2500,
+      duration: '3 days',
+      challenges: [
+        'Creating standout visibility among numerous competing brands',
+        'Designing interactive displays for diverse appliance categories',
+        'Managing high visitor traffic while maintaining quality engagements'
+      ],
+      solutions: [
+        'Developed an eye-catching booth design with bold branding elements',
+        'Created dedicated demo zones for each product category with trained staff',
+        'Implemented a queuing system with digital engagement tools to manage flow'
+      ],
+      results: [
+        'Generated over 800 qualified leads during the expo',
+        'Achieved 85% brand recall in post-event surveys',
+        'Successfully showcased 15+ new product models',
+        'Increased social media engagement by 300% during event period'
+      ]
+    }
+  },
+  {
+    id: 3,
+    title: 'Accu-Chek Tech Summit',
+    description: 'Tech Summit Islamabad Annual technology conference by Accu- Chek bringing together healthcare and tech professionals.',
+    image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyrsWUW59HbkXOnKMNDzgyiFfAU8Ew4dou5qI6',
+    category: 'corporate',
+    details: {
+      date: 'March 15-16, 2023',
+      location: 'Islamabad Serena Hotel',
+      attendees: 350,
+      duration: '2 days',
+      challenges: [
+        'Coordinating schedules of high-profile healthcare professionals and speakers',
+        'Creating a tech-forward atmosphere for a healthcare product',
+        'Managing simultaneous sessions and interactive product demonstrations'
+      ],
+      solutions: [
+        'Developed a detailed timeline with buffer periods for speaker coordination',
+        'Designed a modern tech-inspired stage setup with digital displays',
+        'Implemented a dedicated team for each session with clear communication channels'
+      ],
+      results: [
+        'Successfully hosted 12 keynote speakers and 5 panel discussions',
+        'Achieved 98% positive feedback from attendees on event organization',
+        'Generated significant media coverage in healthcare and tech publications',
+        'Strengthened Accu-Chek\'s position as an innovator in diabetes care technology'
+      ]
+    }
+  },
+  {
+    id: 4,
+    title: 'Pakistan Day Parade',
+    description: 'Grand celebration of Pakistan Day with military parade',
+    image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyysQKE6oB3z1WIT2JrNVES9pam5ejLR7PlCF4',
+    category: 'national',
+    details: {
+      date: '',
+      location: '',
+      attendees: 0,
+      duration: '',
+      challenges: [],
+      solutions: [],
+      results: []
+    }
+  },
+  {
+    id: 5,
+    title: 'Corporate Gala Night',
+    description: "Elegant corporate event with premium networking opportunities",
+    image: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyybL8kqoB3z1WIT2JrNVES9pam5ejLR7PlCF4",
+    category: 'corporate',
+    details: {
+      date: '',
+      location: '',
+      attendees: 0,
+      duration: '',
+      challenges: [],
+      solutions: [],
+      results: []
+    }
+  }
+];
 
 const FeaturedEventsSection = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -48,7 +144,6 @@ const FeaturedEventsSection = () => {
   const containerRef = useRef(null);
   const emblaRef = useRef(null);
   const isInView = useInView(containerRef, { once: true, amount: 0.2 });
-
   const updateScrollButtons = useCallback(() => {
     setCanScrollPrev(selectedIndex > 0);
     setCanScrollNext(selectedIndex < events.length - 1);
@@ -73,6 +168,10 @@ const FeaturedEventsSection = () => {
   const scrollTo = useCallback((index: number) => {
     setSelectedIndex(index);
   }, []);
+
+  const dispatch = useDispatch()
+  const state = useSelector((state: RootState) => state.caseStudyModel)
+  console.log(state);
 
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-900" ref={containerRef}>
@@ -140,13 +239,13 @@ const FeaturedEventsSection = () => {
                       <p className="text-gray-600 dark:text-gray-400 mb-6">
                         {event.description}
                       </p>
-                      <Link
-                        to="/portfolio"
-                        className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors w-fit"
-                      >
+
+                      <button onClick={() => { dispatch(toggleModel()); dispatch(addEvent(event)) }}>
                         View Case Study
-                        <ChevronRight size={18} className="ml-1" />
-                      </Link>
+                      </button>
+
+
+
                     </motion.div>
                   </div>
                 </div>
