@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { ThemeToggle } from '../theme/theme-toggle';
 import { cn } from '../../lib/utils';
-import Logo from '../Logo';
+import RSMediaLogo from '../Logo';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +48,7 @@ const Navbar = () => {
           to="/"
           className="flex items-center gap-2"
         >
-          <Logo />
+          <RSMediaLogo />
         </Link>
 
         {/* Desktop Navigation */}
@@ -82,9 +82,12 @@ const Navbar = () => {
           <ThemeToggle />
           <Link
             to="/contact"
-            className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-md transition-colors duration-300"
+            className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-md transition-colors duration-300 "
           >
+            <p className='mb-2'>
+
             Get a Quote
+            </p>
           </Link>
         </div>
 

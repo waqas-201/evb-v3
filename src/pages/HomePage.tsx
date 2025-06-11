@@ -24,7 +24,7 @@ const HomePage = () => {
       variants={pageVariants}
     >
       <Helmet>
-        <title>Elegant Events | Professional Event Planning</title>
+        <title>RS Media Services| Professional Event Planning</title>
         <meta name="description" content="Make your events memorable with our professional event planning services" />
       </Helmet>
       

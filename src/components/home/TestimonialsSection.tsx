@@ -5,37 +5,31 @@ import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 const testimonials = [
   {
     id: 1,
-    name: 'Sarah Johnson',
-    role: 'Bride',
-    quote: 'Elegant Events transformed our wedding day into a magical experience. Their attention to detail and creativity exceeded our expectations. Every moment was perfect!',
-    avatar: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150',
+    name: 'Ayesha & Bilal',
+    role: 'Couple',
+    quote: 'From the mehndi glow to our walima, RS Media captured every heartfelt smile and vibrant detail. Our celebrations felt both traditional and stylish!',
+    avatar: 'https://ui-avatars.com/api/?name=Ayesha+Bilal&background=ff6b6b&color=fff',
     rating: 5,
   },
   {
     id: 2,
-    name: 'Michael Chen',
-    role: 'Corporate Event Manager',
-    quote: 'We\'ve partnered with Elegant Events for three consecutive annual conferences. Their professionalism and ability to deliver under pressure makes them our go-to planning team.',
-    avatar: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=150',
+    name: 'Sara & Hamza',
+    role: 'Couple',
+    quote: 'RS Media transformed our nikah décor into a magical setting. Everything felt so elegant and perfectly aligned with our vision!',
+    avatar: 'https://ui-avatars.com/api/?name=Sara+Hamza&background=4ECDC4&color=fff',
     rating: 5,
   },
   {
     id: 3,
-    name: 'Jessica Rivera',
-    role: 'Birthday Celebrant',
-    quote: 'My 30th birthday party was absolutely stunning thanks to Elegant Events. They captured my vision perfectly and created an unforgettable night for me and my guests.',
-    avatar: 'https://images.pexels.com/photos/773371/pexels-photo-773371.jpeg?auto=compress&cs=tinysrgb&w=150',
-    rating: 5,
-  },
-  {
-    id: 4,
-    name: 'Robert Williams',
-    role: 'Non-profit Director',
-    quote: 'Our fundraising gala raised 40% more than last year thanks to the incredible atmosphere and flawless execution by the Elegant Events team. We couldn\'t be happier!',
-    avatar: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150',
+    name: 'Zainab & Farhan',
+    role: 'Couple',
+    quote: 'Even with last-minute changes, RS Media stayed calm and creative. The wedding looked effortlessly beautiful. We’re grateful for their magic!',
+    avatar: 'https://ui-avatars.com/api/?name=Zainab+Farhan&background=556270&color=fff',
     rating: 5,
   },
 ];
+
+
 
 const TestimonialsSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);

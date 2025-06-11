@@ -5,44 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toggleModel } from '../../featuers/casestudy/caseStudySlice';
 import { RootState } from '../../../store';
 import { addEvent } from '../../featuers/casestudy/eventsDataSlice';
-const eventss = [
-  {
-    id: 1,
-    title: 'CEO Summit Asia 2022',
-    description: 'Spectacular opening ceremony of Pakistan Super League at National Stadium Karachi',
-    image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyBkGjIFE8OQ4V570p6EXahRmwylvNzYkUrcLn',
-    category: 'corporate',
 
-  },
-  {
-    id: 2,
-    title: 'Dawlance Product Showcase',
-    description: 'Dawlance Product Launch Product showcase and promotional activation for Dawlance appliances at a public expo',
-    image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyJHMyyQuBaU9zbedcwR2EV6ps1lu0vCyIi5hQ',
-    category: 'corporate',
-  },
-  {
-    id: 3,
-    title: 'Accu-Chek Tech Summit',
-    description: 'Tech Summit Islamabad Annual technology conference by Accu- Chek bringing together healthcare and tech professionals.',
-    image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyrsWUW59HbkXOnKMNDzgyiFfAU8Ew4dou5qI6',
-    category: 'festival',
-  },
-  {
-    id: 4,
-    title: 'Pakistan Day Parade',
-    description: 'Grand celebration of Pakistan Day with military parade',
-    image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyysQKE6oB3z1WIT2JrNVES9pam5ejLR7PlCF4',
-    category: 'national',
-  },
-  {
-    id: 5,
-    title: 'Corporate Gala Night',
-    description: "Elegant corporate event with premium networking opportunities",
-    image: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyybL8kqoB3z1WIT2JrNVES9pam5ejLR7PlCF4",
-    category: 'corporate'
-  }
-];
 const events = [
 
   {
@@ -105,37 +68,65 @@ const events = [
   },
   {
     id: 4,
-    title: 'Pakistan Day Parade',
-    description: 'Grand celebration of Pakistan Day with military parade',
+    title: 'Leaders in Islamabad Business Summit 2024',
+    description: 'Premier business forum bringing together leaders and innovators to discuss Pakistan’s future.',
     image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyysQKE6oB3z1WIT2JrNVES9pam5ejLR7PlCF4',
-    category: 'national',
+    category: 'business',
     details: {
-      date: '',
-      location: '',
-      attendees: 0,
-      duration: '',
-      challenges: [],
-      solutions: [],
-      results: []
-    }
-  },
-  {
-    id: 5,
-    title: 'Corporate Gala Night',
-    description: "Elegant corporate event with premium networking opportunities",
-    image: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyybL8kqoB3z1WIT2JrNVES9pam5ejLR7PlCF4",
-    category: 'corporate',
-    details: {
-      date: '',
-      location: '',
-      attendees: 0,
-      duration: '',
-      challenges: [],
-      solutions: [],
-      results: []
+      date: '2024',
+      location: 'Serena Hotel, Islamabad',
+      attendees: 500, // You can adjust this number if exact data is available
+      duration: '2 days', // Adjust if known
+      challenges: [
+        'Coordinating high-profile speakers and VIP guests',
+        'Ensuring seamless technical and AV execution',
+        'Managing security for a high-stakes event'
+      ],
+      solutions: [
+        'Handled all event production and speaker coordination end-to-end',
+        'Provided stage design, branding, and full AV support including live broadcast',
+        'Executed meticulous guest management and security logistics'
+      ],
+      results: [
+        'Smooth and professional event delivery recognized by media and attendees',
+        'Widespread media coverage across major national channels',
+        'Strengthened the summit’s brand as a premier platform for policy and business dialogue in the region'
+      ]
     }
   }
+  ,
+  {
+    id: 5,
+    title: 'Make-up City Product Launch',
+    description: 'High-impact product launch event celebrating Make-up City’s milestone in the cosmetics industry.',
+    image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyybL8kqoB3z1WIT2JrNVES9pam5ejLR7PlCF4',
+    category: 'corporate',
+    details: {
+      date: '2024',
+      location: 'Expo Center, Karachi',
+      attendees: 1500, // Estimate; adjust if exact figure is available
+      duration: '1 day',
+      challenges: [
+        'Designing a visually captivating booth setup within tight timelines',
+        'Coordinating logistics for influencers, makeup artists, and product displays',
+        'Ensuring seamless technical execution for demos and AV coverage'
+      ],
+      solutions: [
+        'Delivered full event production and logistics management',
+        'Set up an engaging, on-brand exhibition booth with interactive elements',
+        'Handled AV and lighting installation tailored for live demos and social media sharing',
+        'Facilitated coordination with influencers and beauty experts to enrich guest experience'
+      ],
+      results: [
+        'Successfully launched Make-up City’s 48th store with a memorable brand experience',
+        'Drew significant footfall and social media buzz through influencer participation',
+        'Achieved high engagement and brand exposure across digital channels'
+      ]
+    }
+  }
+
 ];
+
 
 const FeaturedEventsSection = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -240,7 +231,7 @@ const FeaturedEventsSection = () => {
                         {event.description}
                       </p>
 
-                      <button onClick={() => { dispatch(toggleModel()); dispatch(addEvent(event)) }}>
+                      <button className='text-primary' onClick={() => { dispatch(toggleModel()); dispatch(addEvent(event)) }}>
                         View Case Study
                       </button>
 

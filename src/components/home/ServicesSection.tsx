@@ -130,10 +130,12 @@ const ServicesSection = () => {
         >
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-md font-medium transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-md font-medium transition-colors"
           >
-            View All Services
-            <ChevronRight size={18} />
+            <span className="flex items-center gap-2 mb-2">
+              View All Services
+              <ChevronRight size={18} className=" mt-2 " />
+            </span>
           </Link>
         </motion.div>
       </div>

@@ -6,15 +6,15 @@ const CtaSection = () => {
   return (
     <section className="relative py-20 overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-primary/90 dark:bg-primary/80 z-10"></div>
+        <div className="absolute inset-0 bg-primary/70 dark:bg-primary/70 z-10"></div>
         <img
-          src="https://images.pexels.com/photos/2941367/pexels-photo-2941367.jpeg"
+          src="https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpynOIAujWNRVbNH8hopJDBCX4lrT60Q5tZiqzU"
           alt="Pakistani wedding celebration"
           className="absolute inset-0 w-full h-full object-cover"
         />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 ">
         <div className="max-w-3xl mx-auto text-center text-white">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -39,8 +39,11 @@ const CtaSection = () => {
                   to="/contact"
                   className="inline-flex items-center gap-2 bg-white text-primary hover:bg-white/90 px-8 py-3 rounded-md text-lg font-medium transition-colors"
                 >
+                  <p>
+
                   Get Started
-                  <ChevronRight size={18} />
+                  </p>
+                  <ChevronRight size={18} className='mt-2' />
                 </Link>
               </motion.div>
               <motion.div

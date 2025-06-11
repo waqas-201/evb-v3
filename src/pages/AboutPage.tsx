@@ -4,32 +4,32 @@ import { Link } from 'react-router-dom';
 import { ChevronRight, Heart, Users, Trophy, Star } from 'lucide-react';
 import { pageVariants } from '../lib/utils';
 
-const teamMembers = [
-  {
-    name: 'Fatima Khan',
-    role: 'Founder & Creative Director',
-    image: 'https://images.pexels.com/photos/7620808/pexels-photo-7620808.jpeg?auto=compress&cs=tinysrgb&w=400', // Pakistani woman in traditional shalwar kameez
-    bio: 'With over 15 years of experience in event planning, Fatima brings creativity and vision to every project.',
-  },
-  {
-    name: 'Ahmed Raza',
-    role: 'Senior Event Coordinator',
-    image: 'https://images.pexels.com/photos/7562313/pexels-photo-7562313.jpeg?auto=compress&cs=tinysrgb&w=400', // Pakistani man in formal attire
-    bio: 'Ahmed specializes in corporate events and has managed numerous high-profile conferences.',
-  },
-  {
-    name: 'Ayesha Malik',
-    role: 'Wedding Specialist',
-    image: 'https://images.pexels.com/photos/8531516/pexels-photo-8531516.jpeg?auto=compress&cs=tinysrgb&w=400', // Pakistani bride in traditional wedding attire
-    bio: 'Ayesha’s attention to detail and romantic vision has helped create countless dream weddings.',
-  },
-  {
-    name: 'Bilal Hassan',
-    role: 'Logistics Manager',
-    image: 'https://images.pexels.com/photos/7753581/pexels-photo-7753581.jpeg?auto=compress&cs=tinysrgb&w=400', // Pakistani man in professional setting
-    bio: 'Bilal ensures every event runs smoothly by managing vendors, timing, and resources efficiently.',
-  },
-];
+// const teamMembers = [
+//   {
+//     name: 'Fatima Khan',
+//     role: 'Founder & Creative Director',
+//     image: 'https://images.pexels.com/photos/7620808/pexels-photo-7620808.jpeg?auto=compress&cs=tinysrgb&w=400', // Pakistani woman in traditional shalwar kameez
+//     bio: 'With over 15 years of experience in event planning, Fatima brings creativity and vision to every project.',
+//   },
+//   {
+//     name: 'Ahmed Raza',
+//     role: 'Senior Event Coordinator',
+//     image: 'https://images.pexels.com/photos/7562313/pexels-photo-7562313.jpeg?auto=compress&cs=tinysrgb&w=400', // Pakistani man in formal attire
+//     bio: 'Ahmed specializes in corporate events and has managed numerous high-profile conferences.',
+//   },
+//   {
+//     name: 'Ayesha Malik',
+//     role: 'Wedding Specialist',
+//     image: 'https://images.pexels.com/photos/8531516/pexels-photo-8531516.jpeg?auto=compress&cs=tinysrgb&w=400', // Pakistani bride in traditional wedding attire
+//     bio: 'Ayesha’s attention to detail and romantic vision has helped create countless dream weddings.',
+//   },
+//   {
+//     name: 'Bilal Hassan',
+//     role: 'Logistics Manager',
+//     image: 'https://images.pexels.com/photos/7753581/pexels-photo-7753581.jpeg?auto=compress&cs=tinysrgb&w=400', // Pakistani man in professional setting
+//     bio: 'Bilal ensures every event runs smoothly by managing vendors, timing, and resources efficiently.',
+//   },
+// ];
 const stats = [
   { icon: Trophy, label: 'Years Experience', value: '15+' },
   { icon: Star, label: 'Events Completed', value: '1000+' },
@@ -38,7 +38,7 @@ const stats = [
 ];
 
 const AboutPage = () => {
-  return (
+  return (  
     <motion.div
       initial="initial"
       animate="animate"
@@ -56,26 +56,38 @@ const AboutPage = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           <img
-            src="https://images.pexels.com/photos/7149165/pexels-photo-7149165.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            src="https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpybQAjt7BPSqtXB8EIawYKxM72mkTzF0A9JhgC"
             alt="Team working together"
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
-              About <span className="text-primary"> RS Media Solutions</span>
-            </h1>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto justify-start
-">
-              At RS Media Solutions, we specialize in turning your ideas into exceptional realities through expert event planning and media services. Whether it’s a corporate conference, seminar, wedding, product launch, or private gathering, we are your one-stop solution for flawless execution and unforgettable experiences — both indoors and outdoors.
-            </p>
-          </motion.div>
+        <div className="relative">
+          {/* Background Image */}
+          <img
+            src="/your-background.jpg"
+            alt="Background"
+            className="absolute inset-0 w-full h-full object-cover z-0"
+          />
+
+
+
+          {/* Content */}
+          <div className="container mx-auto px-4 relative z-10 text-center py-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
+                About <span className="text-primary">RS Media Solutions</span>
+              </h1>
+              <p className="text-xl text-white max-w-2xl mx-auto leading-relaxed">
+                At  RS Media Solutions, we specialize in turning your ideas into exceptional realities through expert event planning and media services. Whether it’s a corporate conference, seminar, wedding, product launch, or private gathering, we are your one-stop solution for flawless execution and unforgettable experiences — both indoors and outdoors.
+              </p>
+            </motion.div>
+          </div>
         </div>
+
       </section>
 
       {/* Mission Section */}
@@ -92,7 +104,7 @@ const AboutPage = () => {
                 Our <span className="gradient-text">Mission</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-400 text-lg mb-8">
-                At Elegant Events, we believe that every occasion deserves to be extraordinary.
+                At RS Media Solutions, we believe that every occasion deserves to be extraordinary.
                 Our mission is to transform your vision into reality, creating seamless and
                 memorable experiences that exceed expectations.
               </p>
@@ -121,7 +133,7 @@ const AboutPage = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      {/* <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -167,7 +179,7 @@ const AboutPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-white dark:bg-gray-950">

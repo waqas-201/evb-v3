@@ -46,8 +46,11 @@ const HeroSection = () => {
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-md text-lg font-medium transition-colors"
-              >
+              > 
+                <p className='mb-2' >
+
                 Get Started
+                </p>
                 <ChevronRight size={18} />
               </Link>
             </motion.div>
@@ -58,8 +61,11 @@ const HeroSection = () => {
               <Link
                 to="/portfolio"
                 className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 px-8 py-3 rounded-md text-lg font-medium transition-colors"
-              >
+              > 
+                <p className='mb-2'>
+
                 Our Portfolio
+                </p>
               </Link>
             </motion.div>
           </div>

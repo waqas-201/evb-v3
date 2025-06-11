@@ -12,14 +12,14 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center gap-2 text-2xl font-serif font-bold mb-4">
               <PartyPopper className="h-6 w-6 text-primary" />
-              <span>Elegant Events</span>
+              <span>RS Media Services</span>
             </Link>
             <p className="text-gray-400 mb-6">
               Creating unforgettable moments and bringing your event dreams to life with elegance and precision.
             </p>
             <div className="flex space-x-4">
               <motion.a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/rs_media_solutions/profilecard/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 whileHover={{ y: -5, color: '#E1306C' }}
@@ -28,7 +28,7 @@ const Footer = () => {
                 <Instagram size={20} />
               </motion.a>
               <motion.a 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/people/RS-Media-Solutios/61576729419419/?mibextid=wwXIfr&rdid=VlRM6HIdDH98429I&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16KEvN2Ffu%2F%3Fmibextid%3DwwXIfr" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 whileHover={{ y: -5, color: '#1877F2' }}
@@ -46,7 +46,7 @@ const Footer = () => {
                 <Twitter size={20} />
               </motion.a>
               <motion.a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/company/rs-media-solution/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 whileHover={{ y: -5, color: '#0A66C2' }}
@@ -116,15 +116,15 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Phone size={20} className="text-primary shrink-0 mt-1" />
-                <span className="text-gray-400">+1 (123) 456-7890</span>
+                <span className="text-gray-400">0345-8867786</span>
               </li>
               <li className="flex items-start gap-3">
                 <Mail size={20} className="text-primary shrink-0 mt-1" />
-                <span className="text-gray-400">info@elegantevents.com</span>
+                <span className="text-gray-400">info@rsmediaservices</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-primary shrink-0 mt-1" />
-                <span className="text-gray-400">123 Event Avenue, Suite 100, New York, NY 10001</span>
+                <span className="text-gray-400">karachi</span>
               </li>
             </ul>
           </div>
