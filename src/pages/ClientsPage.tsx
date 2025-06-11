@@ -83,7 +83,6 @@ const testimonials = [
   {
     id: 1,
     name: 'Ahmed Khan',
-    role: 'Marketing Director, HBL',
     quote: 'RS Media Solution delivered an exceptional experience for our annual corporate event. Their attention to detail and professionalism was outstanding.',
     rating: 5,
     image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400'
@@ -91,7 +90,6 @@ const testimonials = [
   {
     id: 2,
     name: 'Fatima Ali',
-    role: 'Events Manager, Jazz',
     quote: 'The team\'s creativity and execution for our product launch event exceeded our expectations. They truly understand the Pakistani market.',
     rating: 5,
     image: 'https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg?auto=compress&cs=tinysrgb&w=400'
@@ -99,7 +97,6 @@ const testimonials = [
   {
     id: 3,
     name: 'Zain Ahmed',
-    role: 'CEO, Tech Startup',
     quote: 'From concept to execution, RS Media Solution brought our vision to life. Their team\'s dedication to excellence is unmatched.',
     rating: 5,
     image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400'
@@ -277,7 +274,7 @@ const ClientsPage = () => {
                   />
                   <div>
                     <h4 className="font-bold text-gray-900 dark:text-white">{testimonial.name}</h4>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm">{testimonial.role}</p>
+
                   </div>
                 </div>
                 <div className="flex gap-1 mt-4">

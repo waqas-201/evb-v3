@@ -49,7 +49,7 @@ function App() {
           </Routes>
         </AnimatePresence>
         {showCookieConsent && <CookieConsent onAccept={handleAcceptCookies} />}
-        <WhatsAppWidget phoneNumber="+1234567890" />
+        <WhatsAppWidget phoneNumber="0345-8867786" />
       </Layout>
     </ThemeProvider>
   );

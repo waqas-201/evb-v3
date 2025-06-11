@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-import { ChevronRight, Utensils, PartyPopper, Building, Heart, Cake, Users, Globe } from 'lucide-react';
+import { ChevronRight, PartyPopper, Building, Heart, Users, Globe } from 'lucide-react';
 import { cn, pageVariants } from '../lib/utils';
 
 const cuisineTypes = [
@@ -54,7 +54,7 @@ const eventServices = [
     title: 'Wedding Planning',
     description: 'Create your perfect wedding day with our comprehensive planning services.',
     icon: Heart,
-    image: 'https://images.pexels.com/photos/1024960/pexels-photo-1024960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyo1AOVbX72cMktOxdmK83PfugzWqA1slEUwjL',
     features: [
       'Venue Selection',
       'Decor & Styling',
@@ -69,7 +69,7 @@ const eventServices = [
     title: 'Corporate Events',
     description: 'Professional event management for your business gatherings and conferences.',
     icon: Building,
-    image: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyeHdqoqMj2ZybAWxUqmN4BLMhFIGu9H8cPzEf',
     features: [
       'Conference Planning',
       'Team Building Events',
@@ -84,7 +84,7 @@ const eventServices = [
     title: 'Private Events',
     description: 'Personalized celebrations for your special moments.',
     icon: Users,
-    image: 'https://images.pexels.com/photos/7180617/pexels-photo-7180617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyvyIPbLenwAGufLacIrUyeNJoRmMVd9q8z5lh',
     features: [
       'Birthday Parties',
       'Anniversary Celebrations',
@@ -99,7 +99,7 @@ const eventServices = [
     title: 'Exhibitions & Trade Shows',
     description: 'Showcase your brand with our professional exhibition services.',
     icon: Globe,
-    image: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpydrhtQJUanyuF7olMqRpsBPzgwDvKrT1j9feQ',
     features: [
       'Booth Design',
       'Exhibition Setup',
@@ -259,13 +259,13 @@ const ServicesPage = () => {
               </motion.button>
             ))}
           </div>
-
+          {/*
           <motion.div
             key={selectedCuisine.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+            className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-red-600 "
           >
             <div className="grid md:grid-cols-2">
               <div className="h-full">
@@ -292,7 +292,7 @@ const ServicesPage = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
 
