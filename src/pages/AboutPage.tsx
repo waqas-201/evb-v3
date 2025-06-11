@@ -62,12 +62,7 @@ const AboutPage = () => {
           />
         </div>
         <div className="relative">
-          {/* Background Image */}
-          <img
-            src="/your-background.jpg"
-            alt="Background"
-            className="absolute inset-0 w-full h-full object-cover z-0"
-          />
+
 
 
 

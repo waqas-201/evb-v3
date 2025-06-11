@@ -1,37 +1,39 @@
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
+
 import { pageVariants } from '../lib/utils';
 
 const portfolioItems = [
   {
     id: 1,
-    title: 'HBL Annual Conference 2023',
-    category: 'Corporate Events',
-    image: 'https://images.pexels.com/photos/2182973/pexels-photo-2182973.jpeg',
-    videoUrl: 'https://www.youtube.com/embed/example1',
+    title: 'PRIME Conference on Cardiac Solutions',
+    category: 'Corporate awareness event',
+    image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpy6OaLXPwiTEmRHz7cS4lDZvN5sduCx9UrjMPY',
   },
   {
     id: 2,
-    title: 'Traditional Mehndi Celebration',
-    category: 'Wedding Events',
-    image: 'https://images.pexels.com/photos/2941367/pexels-photo-2941367.jpeg',
-    videoUrl: 'https://www.youtube.com/embed/example2',
+    title: 'Private Event',
+    category: 'Private Event',
+    image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyROtfqQ4FpmWTJ7CDMZ8nXkqOBdrjywYilAa2',
   },
   {
     id: 3,
-    title: 'PSL Opening Ceremony',
-    category: 'Sports Events',
-    image: 'https://images.pexels.com/photos/2263410/pexels-photo-2263410.jpeg',
-    videoUrl: 'https://www.youtube.com/embed/example3',
+    title: 'The Scent Station by Shower Scents',
+    category: 'Brand Activations',
+    image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpykfGHhMqVWG0tMax2PdQjH9lqDFmp46RJgw7s',
   },
   {
     id: 4,
-    title: 'Karachi Eat Festival',
-    category: 'Food Events',
-    image: 'https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg',
-    videoUrl: 'https://www.youtube.com/embed/example4',
+    title: 'Beach Party',
+    category: 'Experiential Marketing',
+    image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpy4tg6TRvHpeGBTS8LAwacr7nJdRF0viUjWquy',
+  },
+
+  {
+    id: 5,
+    title: 'Student Award Ceremon',
+    category: 'Award Ceremony',
+    image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyefYoeoMj2ZybAWxUqmN4BLMhFIGu9H8cPzEf',
   },
 ];
 
@@ -53,7 +55,7 @@ const PortfolioPage = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           <img
-            src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            src="https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyyDhAkRoB3z1WIT2JrNVES9pam5ejLR7PlCF4"
             alt="Portfolio showcase"
             className="w-full h-full object-cover"
           />
@@ -102,23 +104,7 @@ const PortfolioPage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="p-6">
-                  <div className="aspect-video mb-4">
-                    <iframe
-                      src={item.videoUrl}
-                      title={item.title}
-                      className="w-full h-full rounded-lg"
-                      allowFullScreen
-                    />
-                  </div>
-                  <Link
-                    to={`/portfolio/${item.id}`}
-                    className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors"
-                  >
-                    View Details
-                    <ChevronRight size={18} className="ml-1" />
-                  </Link>
-                </div>
+
               </motion.div>
             ))}
           </div>

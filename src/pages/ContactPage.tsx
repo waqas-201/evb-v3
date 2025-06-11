@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { useForm } from 'react-hook-form';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { pageVariants } from '../lib/utils';
 
@@ -9,21 +8,30 @@ const contactInfo = {
   phone: '+92 333 2369979',
   phone2: '+92 334 3245055',
   email: 'info@rsmedia.com.pk',
-  address: 'Sharae Faisal, Karachi, Pakistan',
+  address: 'Karachi, Pakistan',
 };
 
-const mapCenter = {
-  lat: 24.8607,
-  lng: 67.0011,
-};
+
 
 const ContactPage = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
 
-  const onSubmit = (data: any) => {
-    console.log(data);
-    // Handle form submission
+  interface FormData {
+    name: string;
+    email: string;
+    message: string;
+  }
+
+  const onSubmit = (data: FormData) => {
+    const emailTo = 'rsmediasolutions01@gmail.com';
+    const subject = `New Contact Inquiry from ${data.name}`;
+
+
+    const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailTo}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(data.message)}&ui=2&tf=1`;
+
+    window.open(gmailURL, '_blank');
   };
+
 
   return (
     <motion.div
@@ -80,6 +88,7 @@ const ContactPage = () => {
                   <label className="block text-sm font-medium mb-2">Name</label>
                   <input
                     type="text"
+                    placeholder="Enter your name"
                     {...register('name', { required: true })}
                     className="w-full px-4 py-2 rounded-lg border dark:bg-gray-800"
                   />
@@ -89,6 +98,7 @@ const ContactPage = () => {
                   <label className="block text-sm font-medium mb-2">Email</label>
                   <input
                     type="email"
+                    placeholder="Enter your email"
                     {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
                     className="w-full px-4 py-2 rounded-lg border dark:bg-gray-800"
                   />
@@ -97,6 +107,7 @@ const ContactPage = () => {
                 <div>
                   <label className="block text-sm font-medium mb-2">Message</label>
                   <textarea
+                    placeholder="Write your message here"
                     {...register('message', { required: true })}
                     rows={4}
                     className="w-full px-4 py-2 rounded-lg border dark:bg-gray-800"
@@ -147,7 +158,7 @@ const ContactPage = () => {
               </div>
 
               {/* Map */}
-              <div className="h-[300px] rounded-lg overflow-hidden">
+              {/* <div className="h-[300px] rounded-lg overflow-hidden">
                 <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
                   <GoogleMap
                     mapContainerStyle={{ width: '100%', height: '100%' }}
@@ -157,7 +168,7 @@ const ContactPage = () => {
                     <Marker position={mapCenter} />
                   </GoogleMap>
                 </LoadScript>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>
