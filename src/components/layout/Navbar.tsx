@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { ThemeToggle } from '../theme/theme-toggle';
 import { cn } from '../../lib/utils';
-import RSMediaLogo from '../Logo';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +47,11 @@ const Navbar = () => {
           to="/"
           className="flex items-center gap-2"
         >
-          <RSMediaLogo />
+          <img
+            src="../../../public/logo.png"
+            alt="logo"
+            className="h-8 w-auto sm:h-10 md:h-12 lg:h-14 object-contain"
+          />
         </Link>
 
         {/* Desktop Navigation */}

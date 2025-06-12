@@ -1,83 +1,9 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { Star, Quote } from 'lucide-react';
 import { pageVariants } from '../lib/utils';
+import LogoBanner, { CompanyCarousel } from '../components/ClientsLogosCrousle';
 
-const clients = [
-  { 
-    id: 1, 
-    name: 'HBL', 
-    logo: 'https://upload.wikimedia.org/wikipedia/en/3/39/Habib_Bank_Limited_logo.png',
-    category: 'Banking'
-  },
-  { 
-    id: 2, 
-    name: 'Jazz', 
-    logo: 'https://upload.wikimedia.org/wikipedia/en/8/8b/Jazz_Pakistan_logo.png',
-    category: 'Telecom'
-  },
-  { 
-    id: 3, 
-    name: 'K-Electric', 
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/8/8b/K-Electric_logo.png',
-    category: 'Utilities'
-  },
-  { 
-    id: 4, 
-    name: 'PSL', 
-    logo: 'https://upload.wikimedia.org/wikipedia/en/e/e4/Pakistan_Super_League_Logo.png',
-    category: 'Sports'
-  },
-  { 
-    id: 5, 
-    name: 'Ufone', 
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/9/92/Ufone_logo.png',
-    category: 'Telecom'
-  },
-  { 
-    id: 6, 
-    name: 'NBP', 
-    logo: 'https://upload.wikimedia.org/wikipedia/en/d/d3/National_Bank_of_Pakistan_logo.png',
-    category: 'Banking'
-  },
-  { 
-    id: 7, 
-    name: 'PIA', 
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/f/ff/Pakistan_International_Airlines_logo.png',
-    category: 'Aviation'
-  },
-  { 
-    id: 8, 
-    name: 'Engro', 
-    logo: 'https://upload.wikimedia.org/wikipedia/en/8/8b/Engro_Corporation_logo.png',
-    category: 'Conglomerate'
-  },
-  {
-    id: 9,
-    name: 'Telenor',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Telenor_Logo_2021.svg',
-    category: 'Telecom'
-  },
-  {
-    id: 10,
-    name: 'MCB',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/8/8c/MCB_Bank_logo.png',
-    category: 'Banking'
-  },
-  {
-    id: 11,
-    name: 'Nestle Pakistan',
-    logo: 'https://upload.wikimedia.org/wikipedia/en/8/8e/Nestl%C3%A9_logo.svg',
-    category: 'FMCG'
-  },
-  {
-    id: 12,
-    name: 'Unilever Pakistan',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/Unilever_logo.svg',
-    category: 'FMCG'
-  }
-];
 
 const testimonials = [
   {
@@ -103,14 +29,12 @@ const testimonials = [
   }
 ];
 
-const categories = ['All', 'Banking', 'Telecom', 'FMCG', 'Aviation', 'Utilities', 'Sports', 'Conglomerate'];
+
+
+
 
 const ClientsPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const filteredClients = clients.filter(client => 
-    selectedCategory === 'All' ? true : client.category === selectedCategory
-  );
 
   return (
     <motion.div
@@ -177,62 +101,7 @@ const ClientsPage = () => {
       </section>
 
       {/* Client Logos Section */}
-      <section className="py-20 bg-white dark:bg-gray-950">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Trusted by <span className="text-primary">Industry Leaders</span>
-            </h2>
-            <p className="text-gray-800 dark:text-gray-200 max-w-2xl mx-auto mb-8">
-              We're proud to work with some of Pakistan's most respected organizations
-            </p>
-            
-            {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-6 py-2.5 rounded-full transition-all font-medium ${
-                    selectedCategory === category
-                      ? 'bg-primary text-white shadow-lg shadow-primary/25'
-                      : 'bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {filteredClients.map((client, index) => (
-              <motion.div
-                key={client.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, shadow: '0 8px 30px rgba(0,0,0,0.12)' }}
-                className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all flex flex-col items-center justify-center gap-4 border border-gray-100 dark:border-gray-700"
-              >
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  className="h-16 md:h-20 w-auto object-contain filter dark:brightness-0 dark:invert"
-                />
-                <p className="text-sm font-medium text-gray-800 dark:text-gray-200">{client.category}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <LogoBanner />
 
       {/* Client Testimonials */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
@@ -296,3 +165,21 @@ const ClientsPage = () => {
 };
 
 export default ClientsPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

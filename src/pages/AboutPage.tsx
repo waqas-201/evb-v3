@@ -62,22 +62,20 @@ const AboutPage = () => {
           />
         </div>
         <div className="relative">
-
-
-
-
           {/* Content */}
-          <div className="container mx-auto px-4 relative z-10 text-center py-16">
+          <div className="container mx-auto px-6 sm:px-4 relative z-10 text-center py-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
+              className="px-4"
             >
-              <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
+              <h1 className="text-2xl md:text-5xl font-serif font-bold text-white mb-4">
                 About <span className="text-primary">RS Media Solutions</span>
               </h1>
-              <p className="text-xl text-white max-w-2xl mx-auto leading-relaxed">
-                At  RS Media Solutions, we specialize in turning your ideas into exceptional realities through expert event planning and media services. Whether it’s a corporate conference, seminar, wedding, product launch, or private gathering, we are your one-stop solution for flawless execution and unforgettable experiences — both indoors and outdoors.
+              <p className="text-sm md:text-xl text-white max-w-xs sm:max-w-sm md:max-w-2xl mx-auto leading-relaxed">
+                At RS Media Solutions, we specialize in turning your ideas into exceptional realities through expert event planning and media services.
+                {/* Whether it’s a corporate conference, seminar, wedding, product launch, or private gathering, we are your one-stop solution for flawless execution and unforgettable experiences — both indoors and outdoors. */}
               </p>
             </motion.div>
           </div>
