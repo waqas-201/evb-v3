@@ -7,7 +7,35 @@ import { RootState } from '../../../store';
 import { addEvent } from '../../featuers/casestudy/eventsDataSlice';
 
 const events = [
-
+  {
+    id: 5,
+    title: 'Make-up City Product Launch',
+    description: 'High-impact product launch event celebrating Make-up City’s milestone in the cosmetics industry.',
+    image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyybL8kqoB3z1WIT2JrNVES9pam5ejLR7PlCF4',
+    category: 'corporate',
+    details: {
+      date: '2024',
+      location: 'Expo Center, Karachi',
+      attendees: 1500, // Estimate; adjust if exact figure is available
+      duration: '1 day',
+      challenges: [
+        'Designing a visually captivating booth setup within tight timelines',
+        'Coordinating logistics for influencers, makeup artists, and product displays',
+        'Ensuring seamless technical execution for demos and AV coverage'
+      ],
+      solutions: [
+        'Delivered full event production and logistics management',
+        'Set up an engaging, on-brand exhibition booth with interactive elements',
+        'Handled AV and lighting installation tailored for live demos and social media sharing',
+        'Facilitated coordination with influencers and beauty experts to enrich guest experience'
+      ],
+      results: [
+        'Successfully launched Make-up City’s 48th store with a memorable brand experience',
+        'Drew significant footfall and social media buzz through influencer participation',
+        'Achieved high engagement and brand exposure across digital channels'
+      ]
+    }
+  },
   {
     id: 2,
     title: 'Dawlance Product Showcase',
@@ -95,35 +123,7 @@ const events = [
     }
   }
   ,
-  {
-    id: 5,
-    title: 'Make-up City Product Launch',
-    description: 'High-impact product launch event celebrating Make-up City’s milestone in the cosmetics industry.',
-    image: 'https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyybL8kqoB3z1WIT2JrNVES9pam5ejLR7PlCF4',
-    category: 'corporate',
-    details: {
-      date: '2024',
-      location: 'Expo Center, Karachi',
-      attendees: 1500, // Estimate; adjust if exact figure is available
-      duration: '1 day',
-      challenges: [
-        'Designing a visually captivating booth setup within tight timelines',
-        'Coordinating logistics for influencers, makeup artists, and product displays',
-        'Ensuring seamless technical execution for demos and AV coverage'
-      ],
-      solutions: [
-        'Delivered full event production and logistics management',
-        'Set up an engaging, on-brand exhibition booth with interactive elements',
-        'Handled AV and lighting installation tailored for live demos and social media sharing',
-        'Facilitated coordination with influencers and beauty experts to enrich guest experience'
-      ],
-      results: [
-        'Successfully launched Make-up City’s 48th store with a memorable brand experience',
-        'Drew significant footfall and social media buzz through influencer participation',
-        'Achieved high engagement and brand exposure across digital channels'
-      ]
-    }
-  }
+
 
 ];
 
@@ -250,7 +250,7 @@ const FeaturedEventsSection = () => {
             whileTap={{ scale: canScrollPrev ? 0.9 : 1 }}
             onClick={scrollPrev}
             disabled={!canScrollPrev}
-            className={`absolute top-1/2 left-4 -translate-y-1/2 z-10 p-3 rounded-full shadow-md transition-all duration-200 ${canScrollPrev
+            className={`absolute top-1/2 left-4    z-10 p-3 rounded-full shadow-md transition-all duration-200 ${canScrollPrev
               ? 'bg-white/90 dark:bg-gray-800/90 text-gray-700 dark:text-gray-200 hover:bg-white dark:hover:bg-gray-800 cursor-pointer'
               : 'bg-gray-200/50 dark:bg-gray-700/50 text-gray-400 dark:text-gray-600 cursor-not-allowed'
               }`}
@@ -263,7 +263,7 @@ const FeaturedEventsSection = () => {
             whileTap={{ scale: canScrollNext ? 0.9 : 1 }}
             onClick={scrollNext}
             disabled={!canScrollNext}
-            className={`absolute top-1/2 right-4 -translate-y-1/2 z-10 p-3 rounded-full shadow-md transition-all duration-200 ${canScrollNext
+            className={`absolute top-1/2 right-4  z-10 p-3 rounded-full shadow-md transition-all duration-200 ${canScrollNext
               ? 'bg-white/90 dark:bg-gray-800/90 text-gray-700 dark:text-gray-200 hover:bg-white dark:hover:bg-gray-800 cursor-pointer'
               : 'bg-gray-200/50 dark:bg-gray-700/50 text-gray-400 dark:text-gray-600 cursor-not-allowed'
               }`}
