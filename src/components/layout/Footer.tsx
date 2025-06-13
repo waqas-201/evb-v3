@@ -133,7 +133,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm mb-4 md:mb-0">
-              © {currentYear} Elegant Events. All rights reserved.
+              © {currentYear} RS Media Services. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link to="/privacy-policy" className="text-gray-500 hover:text-primary text-sm transition-colors">

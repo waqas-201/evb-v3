@@ -15,6 +15,8 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 import CookieConsent from './components/common/CookieConsent';
 import WhatsAppWidget from './components/common/WhatsAppWidget';
+import { PrivacyPolicyPage } from './pages/PrivecyPolicy';
+import { TermsOfServicePage } from './pages/Toc';
 
 function App() {
   const location = useLocation();
@@ -45,6 +47,8 @@ function App() {
               <Route path="/portfolio" element={<PortfolioPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/clients" element={<ClientsPage />} />
+              <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
+              <Route path="/terms-of-service" element={<TermsOfServicePage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </AnimatePresence>
