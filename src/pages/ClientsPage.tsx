@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { Star, Quote } from 'lucide-react';
 import { pageVariants } from '../lib/utils';
-import LogoBanner, { CompanyCarousel } from '../components/ClientsLogosCrousle';
+import LogoBanner from '../components/ClientsLogosCrousle';
 
 
 const testimonials = [
