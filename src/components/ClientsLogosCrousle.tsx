@@ -7,20 +7,23 @@ interface Logo {
 
 const LogoBanner: React.FC = () => {
     const logos: Logo[] = [
-        { id: 1, imageUrl: "/public/coreClient/1.png" },
-        { id: 2, imageUrl: "/public/coreClient/2.png" },
-        { id: 3, imageUrl: "/public/coreClient/3.png" },
-        { id: 4, imageUrl: "/public/coreClient/4.png" },
-        { id: 5, imageUrl: "/public/coreClient/5.png" },
-        { id: 6, imageUrl: "/public/coreClient/6.png" },
-        { id: 7, imageUrl: "/public/coreClient/7.png" },
-        { id: 8, imageUrl: "/public/coreClient/8.png" },
-        { id: 9, imageUrl: "/public/coreClient/9.png" },
-        { id: 10, imageUrl: "/public/coreClient/10.png" },
-        { id: 11, imageUrl: "/public/coreClient/11.png" },
-        { id: 12, imageUrl: "/public/coreClient/12.png" },
-        { id: 13, imageUrl: "/public/coreClient/13.png" },
-        { id: 14, imageUrl: "/public/coreClient/14.png" },
+        { id: 1, imageUrl: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyKXyPAykmDgqVAUisTnHel1hZILj6YdbypG5O" },
+        { id: 2, imageUrl: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpy6YFrzMwiTEmRHz7cS4lDZvN5sduCx9UrjMPY" },
+        { id: 3, imageUrl: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpy8EU6RydWiETSfsCPbnH5BjK34kNomJxA2FL1" },
+        { id: 4, imageUrl: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyANBMnLxz0qRSwO7nKAbray1luMXcmoxBkhZ2" },
+        { id: 5, imageUrl: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyUcaObugGCqzTuFJN6QmZXkxsMLI8PloAiRj9" },
+        { id: 6, imageUrl: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpysHyKGmO1BpCj6vQ0As9eSdYDrW8XOzqkoLNP" },
+        { id: 7, imageUrl: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyDjbO1JHv4ciMFZydUTGONufjDP2nCmklqwQh" },
+        { id: 8, imageUrl: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpykiICXLqVWG0tMax2PdQjH9lqDFmp46RJgw7s" },
+        { id: 9, imageUrl: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyhQkDCJAKj7fA3e85OBlx0zgaYQTt4INcwCqU" },
+        { id: 10, imageUrl: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyOjjhCczVIhDQtZcw8vre9MmpA3B0y4ifYWTq" },
+        { id: 11, imageUrl: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpytDDDsxirRWE631amLTylo07sQqzv8Kc29YFB" },
+        { id: 12, imageUrl: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyg6yEokBYON5KEV6bQM7zx0psw9DHqoudkGJZ" },
+        { id: 13, imageUrl: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpy8gyR2SFdWiETSfsCPbnH5BjK34kNomJxA2FL" },
+        { id: 14, imageUrl: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpy0gIplbR82eN57yxGY9OAXMjqLQravUkh6ftw" },
+        { id: 15, imageUrl: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpy8ouRRPdWiETSfsCPbnH5BjK34kNomJxA2FL1   " },
+        { id: 16, imageUrl: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyuyPE9s2euV5MTzfslNivgacUjwyYKAZSXm49" },
+        { id: 17, imageUrl: "https://eo99bignn7.ufs.sh/f/YHwkBrGDMhpyg8dblpYON5KEV6bQM7zx0psw9DHqoudkGJZt" },
     ];
 
     return (
